@@ -43,8 +43,8 @@ console.log(quotes);
 ***/
 
 function getRandomQuote(){
-  var i = quotes[ Math.floor( Math.random() * quotes.length )];
-  return "i";
+  var i = Math.floor( Math.random() * quotes.length );
+  return quotes[i];
 }
 
 
@@ -61,7 +61,20 @@ function getRandomQuote(){
    - Set the `innerHTML` of the `quote-box` div to the HTML string.
 ***/
 
-
+function printQuote(){
+  var randomQuote = getRandomQuote(quotes);
+  var htmlString = '<p class = "quotes"> randomQuote.quote </p>'
+   + '<p class = "source"> randomQuote.source'
+  if (randomQuote.citation){
+    + '<span class = "citation"> randomQuote.citation </span>'
+  } else if (randomQuote.year){
+    + '<span class = "year"> randomQuote.year </span>'
+  } else {
+    + '</p>'
+  }
+  console.log(htmlString);
+  document.getElementById("quote-box").innerHTML = "htmlString";
+}
 
 
 /***

@@ -63,12 +63,12 @@ function getRandomQuote(){
 
 function printQuote(){
   var randomQuote = getRandomQuote(quotes);
-  var htmlString = '<p class = "quotes"> randomQuote.quote </p>'
-   + '<p class = "source"> randomQuote.source'
+  var htmlString = '<p class = "quotes">' + randomQuote.quote + '</p>'
+   + '<p class = "source">' + randomQuote.source
   if (randomQuote.citation){
-    + '<span class = "citation"> randomQuote.citation </span>'
+    + '<span class = "citation">' + randomQuote.citation + '</span>'
   } else if (randomQuote.year){
-    + '<span class = "year"> randomQuote.year </span>'
+    + '<span class = "year">' + randomQuote.year + '</span>'
   } else {
     + '</p>'
   }

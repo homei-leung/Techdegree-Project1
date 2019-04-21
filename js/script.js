@@ -75,7 +75,6 @@ function printQuote(){
   }
 }
 printQuote();
-
 /***
   Call the `printQuote` function when the "Show another quote" button is clicked.
 ***/

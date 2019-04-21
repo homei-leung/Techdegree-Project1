@@ -61,20 +61,21 @@ function printQuote(){
   }
   return htmlString;
   document.getElementById('quote-box').innerHTML = htmlString;
+  randomColor();
+}
 
   /***
-  The randomColor function changes the background color every time printQuote is called.
+  The randomColor function changes the background color.
   ***/
-  function randomColor(){
-    var r = Math.floor( Math.random() * 255 );
-    var g = Math.floor( Math.random() * 255 );
-    var b = Math.floor( Math.random() * 255 );
-    var color = 'rgb(' + r + ',' + g + ',' + b +')'
-    return color;
-    document.querySelector('body').style.backgroundColor = color;
+function randomColor(){
+  var r = Math.floor( Math.random() * 255 );
+  var g = Math.floor( Math.random() * 255 );
+  var b = Math.floor( Math.random() * 255 );
+  var color = 'rgb(' + r + ',' + g + ',' + b +')'
+  return color;
+  document.querySelector('body').style.backgroundColor = color;
   }
-}
-printQuote();
+
 /***
   Call the `printQuote` function when the "Show another quote" button is clicked.
 ***/

@@ -48,18 +48,17 @@ to the string.
 
 function printQuote(){
   var randomQuote = getRandomQuote(quotes);
-  var htmlString = '<p class = "quotes">' + randomQuote.quote + '</p>'
+  var htmlString = '<p class = "quote">' + randomQuote.quote + '</p>'
    + '<p class = "source">' + randomQuote.source;
   if (randomQuote.citation){
-    htmlString += '<span class = "citation">' + randomQuote.citation + '</span>';
+    htmlString += '<span class = "citation", >' + randomQuote.citation + '</span>';
   } if (randomQuote.year){
-    htmlString += '<span class = "year">' + randomQuote.year + '</span>';
+    htmlString += '<span class = "year">, ' + randomQuote.year + '</span>';
   }if (randomQuote.tags){
-    htmlString += '<span class = "tags">' + randomQuote.tags + '</span>';
+    htmlString += '<span class = "tags">, ' + randomQuote.tags + '</span>';
   }else {
     htmlString += '</p>';
   }
-  return htmlString;
   document.getElementById('quote-box').innerHTML = htmlString;
   randomColor();
 }
@@ -72,7 +71,6 @@ function randomColor(){
   var g = Math.floor( Math.random() * 255 );
   var b = Math.floor( Math.random() * 255 );
   var color = 'rgb(' + r + ',' + g + ',' + b +')'
-  return color;
   document.querySelector('body').style.backgroundColor = color;
   }
 
